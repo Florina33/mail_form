@@ -1,14 +1,6 @@
 <?php
-//echo "Hello";
 // Подключение к БД
-$host = 'localhost'; // имя хоста (уточняется у провайдера)
-$user = 'root'; // заданное вами имя пользователя, либо определенное провайдером
-$pswd = ''; // заданный вами пароль
-$database = 'mailform'; // имя базы данных, которую вы должны создать
-$db_form = new mysqli($host, $user, $pswd, $database);  // создаем экземпляр класса с параметрами подключения к БД.
-
-// $con = mysqli_connect($host, $user, $pswd, $database) or die("Connection Failed");
-// echo "Connection Success";
+include './connectToDb.php';
 
 ?>
 
@@ -47,7 +39,7 @@ $db_form = new mysqli($host, $user, $pswd, $database);  // создаем экз
                     <h4>Make Jooby a part of your business. Let its virtues work for you.</h4>
                     <h5>Contact us to get the partnersship provision.</h5>
                     
-                    <div class="form_result"></div>
+                    <div id="form_result"></div>
 
                     <form id="submitForm" method="POST">
                         <div class="form-row">
@@ -63,23 +55,23 @@ $db_form = new mysqli($host, $user, $pswd, $database);  // создаем экз
                             <div class="form-group col-md-6 required">
                                 <select name="country_form" id="country_form" class="form-control" required>
                                     <option selected hidden value="">Choose country</option>
-                                    <option value="1">Азербайджан</option>
-                                    <option value="2">Армения</option>
-                                    <option value="3">Белорусь</option>
-                                    <option value="4">Казахстан</option>
-                                    <option value="5">Киргизия</option>
-                                    <option value="6">Молдова</option>
-                                    <option value="7">Республика</option>
-                                    <option value="8">Россия</option>
-                                    <option value="9">Таджикистан</option>
-                                    <option value="10">Туркменистан</option>
-                                    <option value="11">Узбекистан</option>
-                                    <option value="12">Украина</option>
+                                    <option value="1" name="Азербайджан">Азербайджан</option>
+                                    <option value="2" name="Армения">Армения</option>
+                                    <option value="3" name="Белорусь">Белорусь</option>
+                                    <option value="4" name="Казахстан">Казахстан</option>
+                                    <option value="5" name="Киргизия">Киргизия</option>
+                                    <option value="6" name="Молдова">Молдова</option>
+                                    <option value="7" name="Республика">Республика</option>
+                                    <option value="8" name="Россия">Россия</option>
+                                    <option value="9" name="Таджикистан">Таджикистан</option>
+                                    <option value="10" name="Туркменистан">Туркменистан</option>
+                                    <option value="11" name="Узбекистан">Узбекистан</option>
+                                    <option value="12" name="Украина">Украина</option>
 
-                                    <option value="13">Франция</option>
-                                    <option value="14">Англия</option>
-                                    <option value="15">Испания</option>
-                                    <option value="16">Италия</option>
+                                    <option value="13" name="Франция">Франция</option>
+                                    <option value="14" name="Англия">Англия</option>
+                                    <option value="15" name="Испания">Испания</option>
+                                    <option value="16" name="Италия">Италия</option>
                                 </select>
                             </div>
 
