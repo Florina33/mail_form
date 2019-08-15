@@ -38,17 +38,15 @@ $db_form = new mysqli($host, $user, $pswd, $database);  // создаем экз
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <h4>Make Jooby a part of your business. Let its virtues work for you.</h4>
+                    <h5>Contact us to get the partnersship provision.</h5>
                     
-                    
-                    <h3>Make Jooby a part of your business. Let its virtues work for you.</h3>
-                    <h4>Contact us to get the partnersship provision.</h4>
-
                     <div class="form_result"></div>
 
                     <form id="submitForm" method="POST">

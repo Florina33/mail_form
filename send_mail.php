@@ -4,7 +4,7 @@
 
 // var_dump($_POST['data']);
 // var_dump($_POST['getCountryValue']);
-// $json = json_decode( $data, true );
+// $json = json_decode( $_POST[0], true );
 // print_r( $json );
 
 echo "11111";
@@ -15,8 +15,6 @@ echo "11111";
 //      // что-то пошло не так, инициализируем пустой массив
 //      $session_data = array();
 //  }
-
-
 
 $to = 'florina33@gmail.com';
 // if(in_array($_POST['getCountryValue'], range($min,$max)))
@@ -29,7 +27,8 @@ $to = 'florina33@gmail.com';
 $subject = 'the subject';
 // $message = 'hello';
 // $message = $json;
-$message =  $_POST['nameForm'];
+// $message =  $_POST['nameForm'];
+$message =  $_POST[0];
 
 // $message = "Name: " . $_POST['nameForm'] . "\nEmail: " . $_POST['emailForm'] . "\nCountry: " . $_POST['countryFormValue'] . "\nPhone: " . $_POST['phoneForm'] . "\nCompany: " . $_POST['companyForm'] . "\nSite: " . $_POST['siteForm']. "\nText: " . $_POST['textForm'];
 // $message = "Name: " . $_POST['getName'] . "\nEmail: " . $_POST['getEmail'] . "\nCountry: " . $_POST['getCountryText'] . "\nPhone: " . $_POST['getPhone'] . "\nCompany: " . $_POST['getCompany'] . "\nSite: " . $_POST['getSite']. "\nText: " . $_POST['getText'];

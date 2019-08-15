@@ -6,7 +6,7 @@ $(document).ready(function () {
         // event.preventDefault(); 
 
         // console.log( $(this).serialize() );
-        alert( "serialize " + $('#submitForm').serialize() );
+        alert($('#submitForm').serialize() );
 
         var nameForm = $("#name_form").val();
         console.log(nameForm);
@@ -34,10 +34,13 @@ $(document).ready(function () {
 
         // console.log($.ajax);
 
+        // var str = $("#submitForm").serializeArray();
+        var str = $("#submitForm").serialize();
+
         var ajaxObj = {
             url: './send_mail.php',
             type: 'post',
-            data: $("#submitForm").serialize(),
+            data: str,
             // data: { 
             //     getName: nameForm, 
             //     getEmail: emailForm, 
@@ -49,6 +52,7 @@ $(document).ready(function () {
             //     getText: textForm 
             // },
             success: function (response) {
+                console.log(response);               
                 alert(response);               
                 // если Сообщение удачно отправлено!
                 if (response) {

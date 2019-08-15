@@ -18,3 +18,11 @@
 .mark_form {
     color: #d9555b;
 }
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
