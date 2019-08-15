@@ -37,17 +37,17 @@ $(document).ready(function () {
         var ajaxObj = {
             url: './send_mail.php',
             type: 'post',
-            // data: $("#submitForm").serialize(),
-            data: { 
-                getName: nameForm, 
-                getEmail: emailForm, 
-                getCountryValue: countryFormValue, 
-                getCountryText: countryFormText, 
-                getPhone: phoneForm, 
-                getCompany: companyForm, 
-                getSite: siteForm, 
-                getText: textForm 
-            },
+            data: $("#submitForm").serialize(),
+            // data: { 
+            //     getName: nameForm, 
+            //     getEmail: emailForm, 
+            //     getCountryValue: countryFormValue, 
+            //     getCountryText: countryFormText, 
+            //     getPhone: phoneForm, 
+            //     getCompany: companyForm, 
+            //     getSite: siteForm, 
+            //     getText: textForm 
+            // },
             success: function (response) {
                 alert(response);               
                 // если Сообщение удачно отправлено!
