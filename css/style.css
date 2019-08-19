@@ -1,5 +1,112 @@
-.content {
+html {
+	overflow: auto;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: normal;
+	font-weight: 400;
+	color: #707070;
+	cursor: default;
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: inherit;
+    text-align: center;
+}
+
+h4 {
+    font-size: 19px;
+    font-family: inherit;
+    font-weight: 400;
+    color: #636363;
+    text-align: center;
+    margin: 0 0 25px;
+}
+
+h5 {
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 400;
+    color: #636363;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.main-page h4 {
+    margin: 0 0 40px;
+}
+
+.main-page h5 {
+    margin: 0 0 25px;
+}
+
+.main-page .content {
     padding:  20px 2%;
+}
+
+.main-modal-dialog {
+    max-width: 750px;
+}
+
+.main-modal-dialog .modal-body {
+    padding: 20px 10%;
+}
+
+.main-modal-dialog .modal-header {
+    border-bottom: none;
+}
+
+.main-modal-dialog .modal-footer {
+    border-top: none;
+}
+
+.main-modal-dialog .form-group {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.main-modal-dialog .form-group.textarea-wrap {
+    padding-right: 16px;
+    padding-left: 15px;
+}
+
+.main-modal-dialog .form-control {
+    font-size: 15px;
+}
+
+.btn_wrap {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn_wrap button#submitForm {
+    color: #78716f;
+    background-color: #ffcd00;
+    border-color: #ffcd00;
+    max-width: 115px;
+    width: 100%;
+}
+
+.btn_wrap button#submitForm:hover {
+    background-color: #f1c40b;
+    border-color: #f1c40b;
+}
+
+.mark_form {
+    color: #d9555b;
+    padding: 12px 18px;
 }
 
 #submitForm .required {
@@ -8,21 +115,16 @@
 
 #submitForm .required:before {
     content: "*";
+    font-size: 19px;
     display: inline-block;
     position: absolute;
-    top: 8px;
-    left: -5px;
+    top: 9px;
+    left: 3px;
+    color: #dc2b47;
+}
+
+#form_result {
     color: #d9555b;
-}
-
-.mark_form {
-    color: #d9555b;
-}
-
-.modal-header {
-    border-bottom: none;
-}
-
-.modal-footer {
-    border-top: none;
+    padding: 5px 17px 22px 17px;
+    font-size: 16px;
 }

@@ -1,21 +1,16 @@
 $(document).ready(function () {
 
-    /* Форма обратной связи */
+    /* feedback forms */
 
     $('#submitForm').submit(function (event) {
-        // event.preventDefault(); 
-
-        // console.log( $(this).serialize() );
-        alert($('#submitForm').serialize() );
+        // alert($('#submitForm').serialize());
 
         var nameForm = $("#name_form").val();
         console.log(nameForm);
-        // alert(nameForm);
 
         var emailForm = $("#email_form").val();
         console.log(emailForm);
 
-        // var countryForm = $("#country_form").find('option:selected');
         var countryFormValue = $("#country_form").find('option:selected').val();
         var countryFormText = $("#country_form").find('option:selected').text();
         console.log(countryFormText);
@@ -41,26 +36,20 @@ $(document).ready(function () {
             getCompany: companyForm, 
             getSite: siteForm, 
             getText: textForm 
-          };
-
-        // var str = $("#submitForm").serializeArray();
-        var str_form = $("#submitForm").serialize();
+        };
+        // var formData = $("#submitForm").serialize();
 
         var ajaxObj = {
             url: './send_mail.php',
             type: 'post',
-            // data: str_form,
             data: formData,
             success: function (response) {
                 console.log(response);               
-                alert(response);               
-                // если Сообщение удачно отправлено!
+                // alert(response);               
                 if (response != 0) {
-                    // $('.form_result').html("Ваше сообщение получено, спасибо!");
                     $('#form_result').text("Ваше сообщение отправлено, спасибо!");
                 }
                 else {
-                    // alert("0000");
                     $('#form_result').text("Ваше сообщение не удалось отправить");
                 }
             },
@@ -74,7 +63,6 @@ $(document).ready(function () {
         event.preventDefault(); // чтоб не перерезагружалась стр.
         return false;
     });
-
 
 });
 
